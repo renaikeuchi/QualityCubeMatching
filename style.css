@@ -12,7 +12,7 @@ body {
   font-family: "Arial", sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f7f7f7;
+  background-color: #ffffff; /* 背景色を白に変更 */
 }
 
 body {
@@ -61,9 +61,8 @@ nav ul {
 
 nav ul li a {
   color: #fff;
-  font-size: 1.8empx;
+  font-size: 16px;
   transition: color 0.3s ease;
-  font-family: "Arial";
 }
 
 nav ul li a:hover {
@@ -240,38 +239,45 @@ nav ul li a:hover {
   flex-direction: column; /* ボタンを縦に並べる */
   align-items: center; /* 中央揃え */
   gap: 20px; /* ボタン間の間隔 */
-  margin-top: 20px;
+  margin-top: 120px;
 }
 
 /* お知らせ */
-.news-list {
+.notice-list {
   list-style: none;
   padding: 0;
-  margin-top: 10%; /* ここはそのままでも良いが、隙間を開けるために調整 */
+  margin-top: 10%; /* 上部の隙間 */
   margin-bottom: 40px; /* フッターとの隙間を調整 */
 }
 
+.notice-list h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 /* その他のスタイルはそのままで */
-.news-list .item a {
+.notice-list .item a {
   display: flex;
   text-decoration: none;
   color: #333;
   border-bottom: 1px solid #ccc;
   padding: 20px;
+  margin-top: 1%;
 }
 
-.news-list .item:first-child a {
+.notice-list .item:first-child a {
   border-top: 1px solid #ccc;
 }
 
-.news-list .item .date,
-.news-list .item .category {
+.notice-list .item .date,
+.notice-list .item .category {
   min-width: 140px;
   font-size: 16px;
   padding: 0 20px;
 }
 
-.news-list .item .category span {
+.notice-list .item .category span {
   background: #999;
   color: #fff;
   text-align: center;
@@ -280,19 +286,81 @@ nav ul li a:hover {
   font-size: 12px;
 }
 
-.news-list .item .title {
+.notice-list .item .title {
   width: 100%;
 }
 
-.news-list .item a:hover .title {
+.notice-list .item a:hover .title {
   color: #00f;
 }
 
 @media screen and (max-width: 767px) {
-  .news-list .item a {
+  .notice-list .item a {
     flex-wrap: wrap;
   }
-  .news-list .item .date {
+  .notice-list .item .date {
+    min-width: 100px;
+  }
+}
+
+/* 最新ニュース */
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10%; /* 上部の隙間 */
+  margin-bottom: 40px; /* フッターとの隙間を調整 */
+}
+
+.news-list h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* その他のスタイルはそのままで */
+.news-list .news-item a {
+  display: flex;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 1%;
+}
+
+.news-list .news-item:first-child a {
+  border-top: 1px solid #ccc;
+}
+
+.news-list .news-item .news-date,
+.news-list .news-item .news-category {
+  min-width: 140px;
+  font-size: 16px;
+  padding: 0 20px;
+}
+
+.news-list .news-item .news-category span {
+  background: #1e90ff; /* 背景色を #1e90ff に変更 */
+  color: #fff; /* テキスト色は白のまま */
+  text-align: center;
+  display: inline-block;
+  padding: 7px 30px; /* 左右の padding を増やして幅を広げる */
+  font-size: 12px;
+  min-width: 160px; /* 必要に応じて最小幅を調整 */
+}
+
+.news-list .news-item .news-title {
+  width: 100%;
+}
+
+.news-list .news-item a:hover .news-title {
+  color: #00f;
+}
+
+@media screen and (max-width: 767px) {
+  .news-list .news-item a {
+    flex-wrap: wrap;
+  }
+  .news-list .news-item .news-date {
     min-width: 100px;
   }
 }
@@ -500,4 +568,38 @@ textarea {
 
 .submit-btn:hover {
   background-color: #ffcc00;
+}
+
+.company-registered {
+  weight: 5%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center; /* 中央寄せを適用 */
+  margin-bottom: 40px; /* フッターとの間隔を追加 */
+}
+
+.company-registered-img {
+  margin-top: 1%;
+  display: block; /* 画像をブロック要素として扱う */
+  margin: 0 auto; /* 左右中央に配置 */
+}
+
+.company-registered + footer {
+  margin-top: 0; /* フッター上部のマージンを削除 */
+  padding-top: 0; /* フッター上部のパディングを削除 */
+}
+
+.company-registered h1 {
+  color: #000; /* 任意の色コードに変更 */
+  display: block; /* 画像をブロック要素として扱う */
+  margin: 0 auto; /* 左右中央に配置 */
+}
+
+.Number-of-companies {
+  font-size: 3.5rem; /* テキストサイズを大きくする */
+  color: #1e90ff;
+  margin-top: 0;
+  font-weight: 900; /* 太文字 */
 }
