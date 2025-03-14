@@ -61,23 +61,53 @@ nav ul {
 
 nav ul li a {
   color: #fff;
-  font-size: 16px;
+  font-size: 1.8empx;
   transition: color 0.3s ease;
+  font-family: "Arial";
 }
 
 nav ul li a:hover {
   color: #ffcc00;
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #1e90ff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /* テキスト部分 */
 /* メインビジュアル */
 .main-visual {
   background-image: url("img/Top.png");
-  background-size: cover; /* 画像をカバーサイズに保つ */
-  background-position: center 50%; /* 画像を下にさらにずらす */
+  background-size: 100% auto; /* 画像が幅に合わせて縮小 */
+  background-position: center center; /* 画像の中央に合わせて表示 */
   text-align: center;
   padding: 120px 20px;
-  height: 80%;
+  height: 80%; /* 高さを調整 */
 
   /* Flexboxを使って配置 */
   display: flex;
@@ -217,9 +247,11 @@ nav ul li a:hover {
 .news-list {
   list-style: none;
   padding: 0;
-  margin-top: 10%;
+  margin-top: 10%; /* ここはそのままでも良いが、隙間を開けるために調整 */
+  margin-bottom: 40px; /* フッターとの隙間を調整 */
 }
 
+/* その他のスタイルはそのままで */
 .news-list .item a {
   display: flex;
   text-decoration: none;
@@ -272,7 +304,8 @@ nav ul li a:hover {
   color: #999;
   background: #fff;
   border-top: 1px solid #e5e7eb;
-  margin-top: 10%;
+  margin-top: 0; /* フッターの上部のマージンを削除 */
+  padding-top: 0; /* フッター上部のパディングを削除 */
 }
 
 .footer-container {
@@ -280,6 +313,7 @@ nav ul li a:hover {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
+  margin-top: 1%;
 }
 
 .footer-section {
@@ -315,4 +349,155 @@ nav ul li a:hover {
   font-size: 14px;
   margin-top: 20px;
   color: #333;
+}
+
+/* お問い合わせフォームセクション */
+.contact-form-section {
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.contact-form-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-form {
+  width: 30%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-size: 1.1rem;
+  color: #555;
+  display: block; /* ラベルをブロック要素に変更して、左寄せにする */
+  margin-bottom: 5px; /* ラベルと入力フィールドの間隔を少し空ける */
+  float: left; /* 左寄せ */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  margin-top: 5px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1e90ff;
+}
+
+.submit-btn {
+  background-color: #27acd9;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #1a8ab7;
+}
+
+/* 会社情報セクション */
+.company-info {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: left; /* テキストを左寄せ */
+  margin-bottom: 0; /* 下のマージンを削除 */
+}
+
+/* 会社情報セクションとフッターの間隔をなくす */
+.company-info + footer {
+  margin-top: 0; /* フッター上部のマージンを削除 */
+  padding-top: 0; /* フッター上部のパディングを削除 */
+}
+
+.company-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.company-info p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.company-info ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: 0;
+}
+
+.company-info ul li {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.company-info ul li strong {
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  margin-top: 5%;
+}
+
+label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #1e90ff;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 20px; /* ボタンの上に少し余白を追加 */
+  display: block; /* ボタンをブロック要素にして中央寄せ */
+  margin-left: auto; /* 左側のマージンを自動設定 */
+  margin-right: auto; /* 右側のマージンを自動設定 */
+}
+
+.submit-btn:hover {
+  background-color: #ffcc00;
 }
