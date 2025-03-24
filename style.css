@@ -464,9 +464,11 @@ nav ul li a:hover {
 
 /* お問い合わせフォームセクション */
 .contact-form-section {
-  padding: 100px 20px;
+  padding: 80px 40px;
   background-color: #f7f7f7;
   text-align: center;
+  width: 40%;
+  margin-top: 1%;
 }
 
 .contact-form-section h2 {
@@ -476,18 +478,13 @@ nav ul li a:hover {
 }
 
 .contact-form {
-  width: 30%;
+  max-width: 600px;
   margin: 0 auto;
-  background-color: #fff;
-  padding: 40px;
-  weight: 100px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  width: 45%;
 }
 
 .contact-form .form-group {
   margin-bottom: 20px;
+  margin-top: 10%;
 }
 
 .contact-form label {
@@ -534,14 +531,7 @@ nav ul li a:hover {
 .company-info {
   padding: 60px 20px;
   background-color: #fff;
-  text-align: left; /* テキストを左寄せ */
-  margin-bottom: 0; /* 下のマージンを削除 */
-}
-
-/* 会社情報セクションとフッターの間隔をなくす */
-.company-info + footer {
-  margin-top: 0; /* フッター上部のマージンを削除 */
-  padding-top: 0; /* フッター上部のパディングを削除 */
+  text-align: left; /* リストのテキストを左寄せ */
 }
 
 .company-info h2 {
@@ -559,8 +549,8 @@ nav ul li a:hover {
 .company-info ul {
   list-style: none;
   padding: 0;
-  text-align: left;
-  margin: 0;
+  text-align: left; /* リストのテキストを左寄せ */
+  margin: 0; /* マージンの初期化 */
 }
 
 .company-info ul li {
@@ -571,75 +561,6 @@ nav ul li a:hover {
 
 .company-info ul li strong {
   color: #333;
-}
-
-.form-group {
-  margin-bottom: 20px;
-  margin-top: 5%;
-}
-
-label {
-  display: block;
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.submit-btn {
-  background-color: #1e90ff;
-  color: white;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  margin-top: 20px; /* ボタンの上に少し余白を追加 */
-  display: block; /* ボタンをブロック要素にして中央寄せ */
-  margin-left: auto; /* 左側のマージンを自動設定 */
-  margin-right: auto; /* 右側のマージンを自動設定 */
-}
-
-.submit-btn:hover {
-  background-color: #ffcc00;
-}
-
-.company-registered {
-  weight: 5%;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 8px;
-  text-align: center; /* 中央寄せを適用 */
-  margin-bottom: 40px; /* フッターとの間隔を追加 */
-}
-
-.company-registered-img {
-  margin-top: 1%;
-  display: block; /* 画像をブロック要素として扱う */
-  margin: 0 auto; /* 左右中央に配置 */
-}
-
-.company-registered + footer {
-  margin-top: 0; /* フッター上部のマージンを削除 */
-  padding-top: 0; /* フッター上部のパディングを削除 */
-}
-
-.company-registered h1 {
-  color: #000; /* 任意の色コードに変更 */
-  display: block; /* 画像をブロック要素として扱う */
-  margin: 0 auto; /* 左右中央に配置 */
 }
 
 .Number-of-companies {
@@ -784,9 +705,9 @@ textarea {
 
 .members {
   display: inline-block;
-  padding: 30px 45px;
+  padding: 20px 40px;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
   text-align: center;
   margin: 10px;
@@ -1205,6 +1126,16 @@ main {
   text-align: left;
 }
 
+/* .confirmation-wrapper のスタイル */
+.confirmation-wrapper {
+  text-align: center; /* 中央揃え */
+}
+/* .confirmation のスタイル */
+.confirmation {
+  color: red; /* テキストを赤く */
+  display: inline-block; /* 中央揃えを適用するためにインラインブロック */
+}
+
 /* ラベルのスタイル */
 .form-group label {
   font-size: 1.2em;
@@ -1249,4 +1180,92 @@ main {
 
 .apply-button:hover {
   background-color: #0056b3;
+}
+
+/* 応募完了 */
+.apply-success {
+  list-style: none;
+  padding: 0;
+  margin-top: 1%; /* 上部の隙間 */
+  margin-bottom: 40px; /* フッターとの隙間を調整 */
+  background-color: #f5f5f5; /* 背景色 */
+  margin-bottom: 5%; /* フッターとの隙間を調整 */
+  padding-bottom: 40px; /* 画像下にスペースを追加 */
+  width: 150%;
+}
+
+.apply-success h1 {
+  font-size: 2.5rem;
+  margin-top: 5%;
+  margin-bottom: 20px;
+  text-align: center;
+  color: rgb(34, 255, 30);
+}
+
+/* メッセージの本文 */
+.apply-success p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* 応募内容セクション */
+.application-details {
+  margin-bottom: 20px;
+}
+
+.application-details h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.application-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.application-details li {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 8px;
+  padding-left: 140px; /* 左側に余白を追加して右に寄せる */
+}
+
+.confirmation-message {
+  font-size: 0.9em !important; /* 強制的に適用 */
+  margin-top: 30px;
+  line-height: 1.5;
+}
+
+/* 強調部分のスタイル */
+.application-details strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* 次のステップリンク */
+.next-steps {
+  margin-top: 20px;
+  text-align: center; /* リンクを中央に揃える */
+}
+
+.next-steps a {
+  display: inline-block;
+  margin: 10px;
+  font-size: 1.2em;
+  color: #007bff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.next-steps a:hover {
+  background-color: #007bff;
+  color: #fff;
 }
