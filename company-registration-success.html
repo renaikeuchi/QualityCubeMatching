@@ -26,78 +26,30 @@
     </header>
 
     <main>
-      <!-- 企業向け案件登録フォーム -->
-      <div class="job-container">
-        <h2>案件登録 (企業様向け)</h2>
+      <section class="apply-success">
+        <h2>登録が完了しました！</h2>
+        <p>正常に登録されました。</p>
+        <p>以下の内容で登録が完了しましたので、ご確認ください。</p>
 
-        <form action="" method="POST" class="job-form">
-          <div class="job-form-group1">
-            <label for="job-title">案件名</label>
-            <input
-              type="text"
-              id="job-title"
-              name="job-title"
-              placeholder="案件名を入力"
-            />
-          </div>
+        <div class="application-details">
+          <h2>入力内容</h2>
+          <ul>
+            <li><strong>会社名:</strong>株式会社xxx xxx</li>
+            <li><strong>案件名: </strong> Webアプリケーション開発</li>
+            <li><strong>希望するスキル: JavaScript</strong></li>
+            <li><strong>勤務地: 東京</strong></li>
+            <li><strong>報酬: ○○円　～　○○円</strong></li>
+            <li><strong>応募期限: 2025/○○/××</strong></li>
+          </ul>
+        </div>
 
-          <div class="job-form-group2">
-            <label for="job-description">仕事内容</label>
-            <textarea
-              id="job-description"
-              name="job-description"
-              placeholder="仕事内容を詳細に入力"
-            ></textarea>
-          </div>
-
-          <div class="job-form-group3">
-            <label for="skills">希望するスキル</label>
-            <input
-              type="text"
-              id="skills"
-              name="skills"
-              placeholder="例: JavaScript, HTML, CSS"
-            />
-          </div>
-
-          <div class="job-form-group4">
-            <label for="location">勤務地</label>
-            <input
-              type="text"
-              id="location"
-              name="location"
-              placeholder="勤務地を入力"
-            />
-          </div>
-
-          <div class="job-form-group5">
-            <label for="salary">報酬</label>
-            <input
-              type="number"
-              id="salary"
-              name="salary"
-              placeholder="報酬金額 (例: 500000)"
-            />
-            　～　
-            <input
-              class="salary-2"
-              type="number"
-              id="salary"
-              name="salary"
-              placeholder="報酬金額 (例: 500000)"
-            />
-          </div>
-
-          <div class="job-form-group6">
-            <label for="deadline">応募期限</label>
-            <input type="date" id="deadline" name="deadline" />
-          </div>
-
-          <button type="submit" class="job-submit-button">
-            <a href="company-registration-success.html">案件を登録する</a>
-          </button>
-        </form>
-      </div>
+        <div class="next-steps">
+          <a href="index.html">トップへ戻る</a>
+          <a href="#">編集する</a>
+          <a href="company-registration.html">続けて登録する</a>
+          <a href="#">案件一覧を見る</a>
+        </div>
+      </section>
     </main>
 
     <!-- フッター -->
